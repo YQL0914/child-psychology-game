@@ -1,4 +1,4 @@
-# 情绪探险岛 · Emotion Island
+# 儿童心理游戏-情绪探险岛 · child-psychology-game Emotion Island
 
 和森林里的小伙伴一起认识感受，练习应对。暂面向 6—10 岁儿童与陪伴者设计，原生静态网页，无依赖、无账号、不上传儿童选择。
 
