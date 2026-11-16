@@ -39,12 +39,26 @@ node tests/browser-check.mjs
 
 ## 发布 GitHub Pages
 
-1. 将项目上传到你自己的 GitHub 仓库，默认分支设为 `main`。
-2. 仓库 Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**。
-3. 推送 main 或手动运行 `Check and deploy static site` workflow。检查通过后发布页面静态文件与 assets 素材目录；测试和文档不会进入网页发布产物。
-4. 发布地址查看 Actions deployment 或仓库 Pages 设置。所有资源使用相对路径，兼容仓库子路径。
+本项目已使用 **GitHub Pages** 发布，采用 **Deploy from a branch** 方式，无须创建 GitHub Release，也无须单独部署服务器。
 
-站点已发布到 GitHub Pages。2026-11-11 已检查线上图片、三个故事主要流程、说明页面及桌面和手机布局，详见[项目说明书的上线检查记录](docs/项目说明书.md#九上线检查记录)。
+- **在线体验**：[情绪探险岛](https://yql0914.github.io/child-psychology-game/)
+- **源码仓库**：[YQL0914/child-psychology-game](https://github.com/YQL0914/child-psychology-game)
+- **当前发布设置**：仓库 **Settings → Pages → Build and deployment**，Source 为 `Deploy from a branch`，Branch 为 `main`，Folder 为 `/(root)`。
+
+后续更新操作：
+
+1. 将代码、页面和 `assets/` 等资源按原有目录结构提交至 `main` 分支。
+2. GitHub Pages 根据 `main` 分支根目录中的文件自动构建和部署，无需每次手动点击发布，也不需要创建 Release。
+3. 在仓库 **Settings → Pages** 查看部署状态，发布完成后打开上面的在线体验链接验证。
+4. 修改涉及图片或脚本时，重点检查 `assets/stories/` 资源是否正常加载、三个故事的交互流程及手机端布局；如浏览器仍显示旧内容，可强制刷新后再测试。
+
+> 说明：当前采用的是分支发布方式，仓库中的文档和测试文件并不会因使用 GitHub Pages 而自动从发布源中排除。若日后希望仅发布筛选后的静态文件，可再考虑切换到 GitHub Actions 构建发布。
+
+项目说明书记录了 **2026-11-11** 的上线检查情况，详见[项目说明书的上线检查记录](docs/项目说明书.md#九上线检查记录)。该历史记录不替代每次更新后的在线功能回归检查。
+
+### 版本发布说明
+
+GitHub Pages 用于提供可直接访问的在线游戏；GitHub Release 主要用于标记可下载的版本，**不是网站上线的必需步骤**。当前仍属于心理教育原型阶段，可先持续迭代。日后如需在作品集中标记稳定的原型版本，可按实际完成情况创建 `v0.1.0` 等版本标签，并写明验证范围与已知限制。
 
 ## 文件
 
